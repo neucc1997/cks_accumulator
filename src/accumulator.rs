@@ -189,7 +189,7 @@ impl AccumulatorEntries for InMemoryAccumulatorEntries {
 }
 
 impl InMemoryAccumulatorEntries {
-    fn new(size: usize, label: &[u8]) -> (InMemoryAccumulatorEntries, FieldElement, GT) {
+    pub fn new(size: usize, label: &[u8]) -> (InMemoryAccumulatorEntries, FieldElement, GT) {
         let trapdoor = FieldElement::random();
 
         let(g1_powers, g2_powers, z) = generate_entries_from_trapdoor(size, label, &trapdoor);
