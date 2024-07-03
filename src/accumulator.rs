@@ -295,7 +295,7 @@ impl Witness {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct Accumulator(G1);
+pub struct Accumulator(pub G1);
 
 impl Accumulator {
     pub fn new() -> Self {
